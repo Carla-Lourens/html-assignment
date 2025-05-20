@@ -7,33 +7,83 @@ body {
     padding: 20px;
 }
 
-/* Navigation */
 header {
     background-color: #a4becd;
     padding: 5px;
 }
 
+/* Basic styling for navigation */
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: column;
+    gap: 10px; /* space between menu items - smaller screens */
+    align-items: center;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+nav ul li {
+    margin: 0; /* remove vertical margin */
 }
 
 nav ul li a {
     text-decoration: none;
     color: #183c66;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color:#a85664;
+}
+
+/* Initially hide the nested lists */
+ul ul {
+  display: none;
+}
+
+/* Show the nested list when the parent <li> is hovered */
+li:hover > ul {
+  display: block;
+}
+
+/* Styling for the nested list */
+nav ul li ul {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li ul li a {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    color: #183c66;
+    border-radius: 4px;
+}
+
+nav ul li ul li a:hover {
+    background-color: #a85664;
+    color: white;
 }
 
 /* Hero Section */
-main img:first-of-type {
+main img {
     width: 100%;
-    max-height: 400px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
     padding-top: 20px;
 }
 
@@ -62,6 +112,14 @@ h2 {
     text-decoration: none;
     font-size: 15px;
     border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #793149;
+    color: white;
+    text-decoration-line: underline;
+    transform: scale(1.1);
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2)
   }
 
 /* Our Story Section */
@@ -101,3 +159,21 @@ footer {
     font-weight: bold;
     color: #183c66;
 }
+
+/* Footer Bouncing animation */
+footer .bouncing-text {
+    animation: bounce 2s infinite; /* Infinite bouncing */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Original position */
+    }
+    40% {
+        transform: translateY(-10px); /* Move up */
+    }
+    60% {
+        transform: translateY(-5px); /* Move slightly down */
+    }
+}
+
