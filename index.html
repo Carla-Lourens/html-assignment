@@ -5,6 +5,7 @@
      <title>We're Getting Married!</title>
       <!-- Linking the external CSS file -->
      <link rel="stylesheet" href="styles.css"> 
+     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,7 +32,14 @@
             <div style="text-align: center;">
                 <H1>We're Getting Married!</H1>
                 <h2>18 April 2026, 3:00pm | Langkloof Roses</h2> 
-                <a href="thedetails.html" role="button" class="btn">The details</a>
+                <a href="thedetails.html" role="button" class="btn" id="detailsBtn">The details</a>
+                    <div id="popup" class="popup hidden">
+                        <div class="popup-content">
+                        <button id="closePopup" class="close-btn" aria-label="Close popup">&times;</button> 
+                        <p>We can’t wait to share all the wedding details with you! 💍</p>
+                        <a href="thedetails.html" class="btn">This way to the fun ➔</a>
+                        </div>
+                    </div>
             </div>
         </section>
         <section>
