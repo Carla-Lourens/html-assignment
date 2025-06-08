@@ -1,0 +1,77 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #fffaf5;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .error-message {
+    color: #a85664;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  
+  button {
+    background-color: #a85664;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #793149;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fffaf5;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .close-modal {
+    margin-top: 20px;
+    background-color: #a4becd;
+  }
+  
